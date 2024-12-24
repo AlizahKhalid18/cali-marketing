@@ -1,22 +1,27 @@
 import React from "react";
 import aboutusimg from "../assets/aboutusimg.jpg";
+
 const AboutUs = () => {
   return (
-    <div className="px-4 py-10 md:px-16" style={{ marginTop: "8vw" }}>
-      <div className="mb-6">
+    <div className="px-4 py-10 md:px-16  mt-20 md:mt-30 ">
+      {/* Heading Section */}
+      <div className="mb-6 text-center md:text-left">
         <h1 className="text-4xl font-bold text-[#ccaa0d]">About Us</h1>
         <p className="text-gray-500">Discover more about Cali Marketing</p>
       </div>
 
+      {/* Content Section */}
       <div className="flex flex-col md:flex-row items-center md:items-start mb-10 gap-8">
+        {/* Image Section */}
         <div className="w-full md:w-1/2">
           <img
             src={aboutusimg}
             alt="About Cali Marketing"
-            className="w-[70] rounded-lg"
+            className="w-full max-w-full rounded-lg object-cover"
           />
         </div>
 
+        {/* Text Section */}
         <div className="w-full md:w-1/2">
           <p className="text-gray-700 mb-4">
             At <strong>Cali Marketing</strong>, we are dedicated to helping
@@ -37,7 +42,7 @@ const AboutUs = () => {
             your visibility but also to build meaningful connections with your
             target audience.
           </p>
-          <p className="text-gray-700 mb-5">
+          <p className="text-gray-700">
             At Cali Marketing, we believe in innovation, integrity, and results.
             We work tirelessly to transform challenges into opportunities,
             ensuring your business stays ahead in the ever-changing digital
@@ -46,7 +51,9 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
+      {/* Cards Section */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Card 1 */}
         <div className="bg-white shadow-lg rounded-lg p-6 border-t-4 border-[#ccaa0d]">
           <h3 className="text-lg font-bold mb-2">What We Do</h3>
           <p className="text-gray-600">
@@ -57,6 +64,7 @@ const AboutUs = () => {
           </p>
         </div>
 
+        {/* Card 2 */}
         <div className="bg-white shadow-lg rounded-lg p-6 border-t-4 border-[#ccaa0d]">
           <h3 className="text-lg font-bold mb-2">Our Mission</h3>
           <p className="text-gray-600">
@@ -67,6 +75,7 @@ const AboutUs = () => {
           </p>
         </div>
 
+        {/* Card 3 */}
         <div className="bg-white shadow-lg rounded-lg p-6 border-t-4 border-[#ccaa0d]">
           <h3 className="text-lg font-bold mb-2">Our Goal</h3>
           <p className="text-gray-600">
