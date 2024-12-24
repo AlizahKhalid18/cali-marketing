@@ -69,7 +69,7 @@ const ITServicesSection = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     swipe: true,
     draggable: true,
     arrows: false,
