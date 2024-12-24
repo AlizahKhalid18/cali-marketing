@@ -14,7 +14,7 @@ const Hero = () => {
           Transforming Digital <br /> Ideas into Profitable <br /> Solutions
         </h1>
         <p
-          className="mt-4 text-sm sm:text-base md:text-lg animate__animated animate__fadeInRight animate__delay-2s"
+          className="mt-2 text-sm sm:text-base md:text-lg animate__animated animate__fadeInRight animate__delay-2s"
           style={{
             color: "#ccaa0d",
           }}
@@ -28,7 +28,7 @@ const Hero = () => {
       </div>
 
     
-      <div className="absolute  right-5 sm:right-10 md:right-20 animate__animated animate__bounceIn animate__delay-3s">
+      <div className="absolute bottom-5  md:bottom-20 right-5 sm:right-10 md:right-20 animate__animated animate__bounceIn animate__delay-3s">
         <button className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-[#0d3880] text-white rounded-full flex items-center justify-center shadow-lg hover:bg-[#ccaa0d] transition transform hover:scale-110">
           <span className="text-xs sm:text-sm md:text-base text-center font-bold leading-tight">
             LET'S DISCUSS YOUR PROJECT
