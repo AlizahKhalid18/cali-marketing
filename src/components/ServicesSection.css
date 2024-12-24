@@ -1,0 +1,51 @@
+.services-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+}
+.image-container img {
+  box-shadow: none;
+  width: 90%;
+}
+@media (min-width: 768px) {
+  .services-container {
+    flex-direction: row;
+  }
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-item {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 1rem;
+  cursor: pointer;
+}
+
+.service-item:hover {
+  background-color: #f9f9f9;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.service-title.active {
+  color: red;
+  font-weight: bold;
+}
+
+.service-id {
+  font-size: 1.2rem;
+  color: grey;
+}
