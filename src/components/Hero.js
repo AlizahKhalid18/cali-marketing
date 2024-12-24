@@ -5,15 +5,16 @@ import "animate.css";
 const Hero = () => {
   return (
     <section
-      className="relative bg-cover bg-center bg-no-repeat text-white h-[110vh] flex items-center justify-center"
+      className="relative bg-cover bg-center bg-no-repeat text-white min-h-screen flex items-center justify-center"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      <div className="text-center px-4 bg-black bg-opacity-50 rounded-lg py-8 md:py-12 animate__animated animate__fadeInUp animate__delay-1s">
-        <h1 className="text-3xl md:text-6xl font-bold leading-tight animate__animated animate__fadeInRight animate__delay-1s">
+      {/* Text Content */}
+      <div className="text-center px-4 py-6 md:py-12 bg-black bg-opacity-50 rounded-lg animate__animated animate__fadeInUp animate__delay-1s">
+        <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold leading-tight animate__animated animate__fadeInRight animate__delay-1s">
           Transforming Digital <br /> Ideas into Profitable <br /> Solutions
         </h1>
         <p
-          className="mt-4 text-sm md:text-base animate__animated animate__fadeInRight animate__delay-2s"
+          className="mt-4 text-sm sm:text-base md:text-lg animate__animated animate__fadeInRight animate__delay-2s"
           style={{
             color: "#ccaa0d",
           }}
@@ -26,9 +27,10 @@ const Hero = () => {
         </p>
       </div>
 
-      <div className="absolute bottom-10 md:bottom-20 right-5 md:right-10 animate__animated animate__bounceIn animate__delay-3s">
-        <button className="w-24 h-24 md:w-32 md:h-32 bg-[#0d3880] text-white rounded-full flex items-center justify-center shadow-lg hover:bg-[#ccaa0d] transition transform hover:scale-110">
-          <span className="text-xs md:text-sm text-center font-bold leading-tight">
+      {/* Button */}
+      <div className="absolute bottom-5 sm:bottom-10 md:bottom-20 right-5 sm:right-10 md:right-20 animate__animated animate__bounceIn animate__delay-3s">
+        <button className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-[#0d3880] text-white rounded-full flex items-center justify-center shadow-lg hover:bg-[#ccaa0d] transition transform hover:scale-110">
+          <span className="text-xs sm:text-sm md:text-base text-center font-bold leading-tight">
             LET'S DISCUSS YOUR PROJECT
           </span>
         </button>
