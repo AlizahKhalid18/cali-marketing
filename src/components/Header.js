@@ -30,19 +30,17 @@ const Header = () => {
   }, []);
 
   const isAboutPage = location.pathname === "/about";
-  
 
   return (
     <header
       className={`flex justify-between items-center p-6 fixed top-0 left-0 w-full z-50 transition-colors duration-300
          ${
-        isAboutPage
-          ? "bg-transparent"
-          : isScrolled
-          ? "bg-[#0d3880]"
-          : "bg-blue"
-          
-      } text-[#ccaa0d]`}
+           isAboutPage
+             ? "bg-transparent"
+             : isScrolled
+             ? "bg-[#0d3880]"
+             : "bg-blue"
+         } text-[#ccaa0d]`}
     >
       <div>
         <img src={logo} alt="Cali Marketing Logo" className="h-10 w-auto" />
@@ -72,9 +70,7 @@ const Header = () => {
           onMouseEnter={toggleDropdown}
           onMouseLeave={toggleDropdown}
         >
-          <span
-            className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition cursor-pointer"
-          >
+          <span className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition cursor-pointer">
             Services
           </span>
           {isDropdownOpen && (
@@ -136,20 +132,19 @@ const Header = () => {
           to="/pricing"
           className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition"
         >
-     Pricing
+          Pricing
         </Link>
       </nav>
 
       <div className="hidden md:flex items-center space-x-4">
-  <span className="text-[#ccaa0d] font-medium">+1 (424) 522-4854</span>
-  <Link
-    to="/contact"
-    className="border-2 border-[#ccaa0d] px-4 py-1 rounded-full hover:bg-[#ccaa0d] hover:text-[#0d3880] transition text-center"
-  >
-    CONTACT US →
-  </Link>
-</div>
-
+        <span className="text-[#ccaa0d] font-medium">+1 (424) 522-4854</span>
+        <Link
+          to="/contact"
+          className="border-2 border-[#ccaa0d] px-4 py-1 rounded-full hover:bg-[#ccaa0d] hover:text-[#0d3880] transition text-center"
+        >
+          CONTACT US →
+        </Link>
+      </div>
 
       <div className="md:hidden flex items-center">
         <button
@@ -206,6 +201,12 @@ const Header = () => {
             onClick={toggleMenu}
           >
             Services
+          </Link>
+          <Link
+            to="/pricing"
+            className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition"
+          >
+            Pricing
           </Link>
           <Link
             to="/contact"
