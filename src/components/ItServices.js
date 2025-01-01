@@ -99,7 +99,7 @@ const ITServicesSection = () => {
       </div>
 
       <p className="text-center text-gray-400 max-w-2xl mx-auto mb-12">
-        At Cali-Marketing, we offer custom IT solutions to drive the digital
+        At Cali Digital Marketing, we offer custom IT solutions to drive the digital
         transformation of your business. From website design to digital
         marketing, our services are designed to enhance your online presence and
         business growth.

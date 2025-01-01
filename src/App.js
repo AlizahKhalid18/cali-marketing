@@ -6,8 +6,14 @@ import LogoSlider from "./components/LogoSlider";
 import ServicesSection from "./components/ServicesSection";
 import ITServicesSection from "./components/ItServices";
 import AboutUs from "./pages/AboutUs";
-
 import "./App.css";
+import WhyCaliMarketing from "./components/WhyCaliMarketing";
+import ContactUs from "./pages/ContactUs";
+import PricingData from "./pages/PricingData";
+import OurApproach from "./components/OurApproach";
+import Footer from "./components/Footer";
+import PlanDetails from "./pages/PlanDetails";
+import KnowOurStory from "./components/KnowOurStory";
 
 function App() {
   return (
@@ -23,11 +29,18 @@ function App() {
                 <LogoSlider />
                 <ServicesSection />
                 <ITServicesSection />
+                <WhyCaliMarketing />
+                <OurApproach/>
+                <KnowOurStory/>
               </>
             }
           />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/pricing" element={<PricingData/>} />
+          <Route path="/plan-details/:planTitle" element={<PlanDetails />} />
         </Routes>
+        <Footer/>
       </div>
     </Router>
   );

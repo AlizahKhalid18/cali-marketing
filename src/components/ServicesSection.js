@@ -9,42 +9,48 @@ const ServicesSection = () => {
   const services = [
     {
       id: "01",
-      title: "Website Development",
+      title: "Website Design",
       description:
-        "Transform your web development idea into reality with the expertise of our talented team of website developers.",
+        "Design and develop visually stunning, user-friendly, and responsive websites that effectively communicate your brand and captivate your audience.",
     },
     {
       id: "02",
-      title: "Mobile App",
+      title: "SEO",
       description:
-        "Build responsive and user-friendly mobile applications tailored for both iOS and Android platforms.",
+        "Optimize your website's performance and content to rank higher on search engines, driving organic traffic and boosting online visibility.",
     },
     {
       id: "03",
-      title: "UI/UX Design",
+      title: "Google Ads",
       description:
-        "Design intuitive and engaging user interfaces with a focus on seamless user experience.",
+        "Create and manage data-driven Google Ads campaigns to maximize reach, engagement, and conversions for your business.",
     },
     {
       id: "04",
-      title: "Graphic Designing",
+      title: "Social Media",
       description:
-        "Create visually appealing designs for logos, brochures, banners, and other marketing materials.",
+        "Develop impactful social media strategies and create engaging content to grow your brand's presence across platforms like Facebook, Instagram, and LinkedIn.",
     },
     {
       id: "05",
-      title: "Video Editing",
+      title: "Email Marketing",
       description:
-        "Edit and produce professional videos for marketing, advertisements, and personal projects.",
+        "Craft compelling email campaigns that nurture leads, engage customers, and drive conversions through personalized communication.",
     },
     {
       id: "06",
-      title: "E-Book Writing",
+      title: "Branding",
       description:
-        "Write and publish high-quality e-books tailored to your audience's preferences.",
+        "Build a strong and memorable brand identity with professional logo design, consistent visuals, and cohesive messaging tailored to your business.",
+    },
+    {
+      id: "07",
+      title: "1V1 Marketing Consulting",
+      description:
+        "Offer personalized one-on-one marketing consultations to develop strategies that align with your business goals and drive measurable results.",
     },
   ];
-
+  
   const [activeIndex, setActiveIndex] = useState(0);
 
   const { ref, inView } = useInView({

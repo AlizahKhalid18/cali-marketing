@@ -1,60 +1,72 @@
 import React from "react";
 import aboutusimg from "../assets/aboutusimg.jpg";
+import backgroundImage from "../assets/about-bg.jpg";
 
 const AboutUs = () => {
   return (
-    <div className="px-4 py-10 md:px-16  mt-20 md:mt-30 ">
-      {/* Heading Section */}
-      <div className="mb-6 text-center md:text-left">
-        <h1 className="text-4xl font-bold text-[#ccaa0d]">About Us</h1>
-        <p className="text-gray-500">Discover more about Cali Marketing</p>
-      </div>
+    <div>
+      {/* Hero Section */}
+      <section
+        className="relative w-full h-[80vh] bg-cover bg-center"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      >
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 flex flex-col items-start justify-center text-left text-white px-6 md:px-20">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            Explore Our Pricing Plans
+          </h1>
+          <p className="text-lg md:text-xl max-w-xl mb-8">
+            Find the perfect plan for your business. Scalable, flexible, and
+            designed to meet your needs.
+          </p>
+        </div>
+      </section>
 
       {/* Content Section */}
-      <div className="flex flex-col md:flex-row items-center md:items-start mb-10 gap-8">
+      <section className="flex flex-col md:flex-row items-center md:items-start gap-8 py-10 px-6">
         {/* Image Section */}
         <div className="w-full md:w-1/2">
           <img
             src={aboutusimg}
             alt="About Cali Marketing"
-            className="w-full max-w-full rounded-lg object-cover"
+            className="w-full rounded-lg object-cover"
           />
         </div>
 
         {/* Text Section */}
-        <div className="w-full md:w-1/2">
-          <p className="text-gray-700 mb-4">
+        <div className="w-full md:w-1/2 text-gray-700 space-y-4">
+          <p>
             At <strong>Cali Marketing</strong>, we are dedicated to helping
             businesses thrive in the digital world. Our expert team specializes
             in cutting-edge technologies and proven strategies to ensure your
             brand stands out in today's competitive market.
           </p>
-          <p className="text-gray-700 mb-4">
+          <p>
             From creating stunning websites to delivering data-driven marketing
             solutions, we aim to be your trusted partner in achieving
             sustainable growth. Our commitment to excellence drives everything
             we do, and we take pride in helping our clients succeed.
           </p>
-          <p className="text-gray-700 mb-4">
+          <p>
             Whether you're a startup looking to make your mark or an established
             business aiming to expand, we provide tailored solutions to meet
             your unique needs. Our services are designed to not only increase
             your visibility but also to build meaningful connections with your
             target audience.
           </p>
-          <p className="text-gray-700">
+          <p>
             At Cali Marketing, we believe in innovation, integrity, and results.
             We work tirelessly to transform challenges into opportunities,
             ensuring your business stays ahead in the ever-changing digital
             landscape. Let us help you shape a future of success and growth.
           </p>
         </div>
-      </div>
+      </section>
 
       {/* Cards Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 pb-10">
         {/* Card 1 */}
-        <div className="bg-white shadow-lg rounded-lg p-6 border-t-4 border-[#ccaa0d]">
+        <article className="bg-white shadow-lg rounded-lg p-6 border-t-4 border-[#ccaa0d]">
           <h3 className="text-lg font-bold mb-2">What We Do</h3>
           <p className="text-gray-600">
             Cali Marketing provides a full suite of IT and digital marketing
@@ -62,10 +74,10 @@ const AboutUs = () => {
             social media management, email marketing, and 1v2 marketing
             consulting.
           </p>
-        </div>
+        </article>
 
         {/* Card 2 */}
-        <div className="bg-white shadow-lg rounded-lg p-6 border-t-4 border-[#ccaa0d]">
+        <article className="bg-white shadow-lg rounded-lg p-6 border-t-4 border-[#ccaa0d]">
           <h3 className="text-lg font-bold mb-2">Our Mission</h3>
           <p className="text-gray-600">
             Our mission is to empower businesses to unlock their full potential
@@ -73,10 +85,10 @@ const AboutUs = () => {
             Marketing, we strive to build meaningful connections between brands
             and their audiences.
           </p>
-        </div>
+        </article>
 
         {/* Card 3 */}
-        <div className="bg-white shadow-lg rounded-lg p-6 border-t-4 border-[#ccaa0d]">
+        <article className="bg-white shadow-lg rounded-lg p-6 border-t-4 border-[#ccaa0d]">
           <h3 className="text-lg font-bold mb-2">Our Goal</h3>
           <p className="text-gray-600">
             Our ultimate goal is to help businesses achieve measurable success
@@ -84,8 +96,8 @@ const AboutUs = () => {
             to deliver results that not only meet but exceed our clients'
             expectations.
           </p>
-        </div>
-      </div>
+        </article>
+      </section>
     </div>
   );
 };
