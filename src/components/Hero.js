@@ -26,13 +26,13 @@ const Hero = () => {
           AT <span style={{ color: "#0d3880" }}>CALI DIGITAL MARKETING</span>,
           WE OFFER CUSTOMIZED SOFTWARE SOLUTIONS FOR BUSINESSES OF ALL SIZES,
           COVERING <br />
-          WEBSITE DESIGN, SEO, GOOGLE ADS, SOCIAL MEDIA, EMAIL MARKETING, BRANDING, 1V1 MARKETING CONSULTING
-
+          WEBSITE DESIGN, SEO, GOOGLE ADS, SOCIAL MEDIA, EMAIL MARKETING,
+          BRANDING, 1V1 MARKETING CONSULTING
         </p>
       </div>
 
-      <div className="absolute bottom-5 md:bottom-8 right-5 sm:right-10 md:right-20 animate__animated animate__bounceIn animate__delay-3s">
-        <button className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 bg-[#0d3880] text-white rounded-full flex items-center justify-center shadow-lg hover:bg-[#ccaa0d] transition transform hover:scale-110">
+      <div className="absolute bottom-5 md:bottom-10 right-5 sm:right-10 md:right-20 animate__animated animate__bounceIn animate__delay-3s">
+        <button className="w-16 h-16 sm:h-24 sm:w-24 md:w-24 md:h-24 lg:w-32 lg:h-32 bg-[#0d3880] text-white rounded-full flex items-center justify-center shadow-lg hover:bg-[#ccaa0d] transition transform hover:scale-110">
           <span className="text-[10px] sm:text-xs md:text-sm lg:text-base text-center font-bold leading-tight">
             LET'S DISCUSS YOUR PROJECT
           </span>
