@@ -6,15 +6,33 @@ import { useLocation } from "react-router-dom";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [isResourcesDropdownOpen, setIsResourcesDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+  const toggleServicesDropdown = () => {
+    setIsServicesDropdownOpen(!isServicesDropdownOpen);
+ 
+    if (isResourcesDropdownOpen) setIsResourcesDropdownOpen(false);
+  };
+
+  const toggleResourcesDropdown = () => {
+    setIsResourcesDropdownOpen(!isResourcesDropdownOpen);
+  
+    if (isServicesDropdownOpen) setIsServicesDropdownOpen(false);
+  };
+
+  const closeDropdown = () => {
+    setIsServicesDropdownOpen(false);
+    setIsResourcesDropdownOpen(false);
   };
 
   useEffect(() => {
@@ -67,13 +85,12 @@ const Header = () => {
         </Link>
         <div
           className="relative"
-          onMouseEnter={toggleDropdown}
-          onMouseLeave={toggleDropdown}
+          onClick={toggleServicesDropdown} 
         >
           <span className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition cursor-pointer">
             Services
           </span>
-          {isDropdownOpen && (
+          {isServicesDropdownOpen && (
             <div className="absolute bg-[#0d3880] text-[#ccaa0d] shadow-md rounded-md mt-2 w-48">
               <ul className="py-2">
                 <li className="hover:bg-gray-100">
@@ -128,12 +145,38 @@ const Header = () => {
             </div>
           )}
         </div>
-        <Link
-          to="/pricing"
-          className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition"
+        <div
+          className="relative"
+          onClick={toggleResourcesDropdown} 
         >
-          Pricing
-        </Link>
+          <span className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition cursor-pointer">
+            Resources
+          </span>
+          {isResourcesDropdownOpen && (
+            <div className="absolute bg-[#0d3880] text-[#ccaa0d] shadow-md rounded-md mt-2 w-48">
+              <ul className="py-2">
+                <li className="hover:bg-gray-100">
+                  <Link
+                    to="/faq"
+                    className="block px-4 py-2 hover:text-[#ccaa0d] transition"
+                    onClick={closeDropdown}
+                  >
+                    FAQ
+                  </Link>
+                </li>
+                <li className="hover:bg-gray-100">
+                  <Link
+                    to="/pricing"
+                    className="block px-4 py-2 hover:text-[#ccaa0d] transition"
+                    onClick={closeDropdown}
+                  >
+                    Pricing
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          )}
+        </div>
       </nav>
 
       <div className="hidden md:flex items-center space-x-4">
@@ -169,9 +212,7 @@ const Header = () => {
       </div>
 
       <div
-        className={`md:hidden ${
-          isOpen ? "block" : "hidden"
-        } absolute top-16 left-0 w-full bg-[#0d3880] text-[#ccaa0d]`}
+        className={`md:hidden ${isOpen ? "block" : "hidden"} absolute top-16 left-0 w-full bg-[#0d3880] text-[#ccaa0d]`}
       >
         <nav className="flex flex-col items-center space-y-4 py-4">
           <Link
@@ -195,19 +236,82 @@ const Header = () => {
           >
             Work
           </Link>
-          <Link
-            to="/services"
-            className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition"
-            onClick={toggleMenu}
-          >
-            Services
-          </Link>
-          <Link
-            to="/pricing"
-            className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition"
-          >
-            Pricing
-          </Link>
+          <div className="relative">
+            <span
+              className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition cursor-pointer"
+              onClick={toggleDropdown}
+            >
+              Services
+            </span>
+            {isDropdownOpen && (
+              <div className="absolute bg-[#0d3880] text-[#ccaa0d] shadow-md rounded-md mt-2 w-48">
+                <ul className="py-2">
+                  <li className="hover:bg-gray-100">
+                    <Link
+                      to="/services/web-development"
+                      className="block px-4 py-2 hover:text-[#ccaa0d] transition"
+                    >
+                      Web Development
+                    </Link>
+                  </li>
+                  <li className="hover:bg-gray-100">
+                    <Link
+                      to="/services/app-development"
+                      className="block px-4 py-2 hover:text-[#ccaa0d] transition"
+                    >
+                      Mobile App Development
+                    </Link>
+                  </li>
+                  <li className="hover:bg-gray-100">
+                    <Link
+                      to="/services/ui-ux-design"
+                      className="block px-4 py-2 hover:text-[#ccaa0d] transition"
+                    >
+                      UI/UX Design
+                    </Link>
+                  </li>
+                  <li className="hover:bg-gray-100">
+                    <Link
+                      to="/services/cloud-computing"
+                      className="block px-4 py-2 hover:text-[#ccaa0d] transition"
+                    >
+                      Cloud Computing
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+          <div className="relative">
+            <span
+              className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition cursor-pointer"
+              onClick={toggleResourcesDropdown}
+            >
+              Resources
+            </span>
+            {isResourcesDropdownOpen && (
+              <div className="absolute bg-[#0d3880] text-[#ccaa0d] shadow-md rounded-md mt-2 w-48">
+                <ul className="py-2">
+                  <li className="hover:bg-gray-100">
+                    <Link
+                      to="/faq"
+                      className="block px-4 py-2 hover:text-[#ccaa0d] transition"
+                    >
+                      FAQ
+                    </Link>
+                  </li>
+                  <li className="hover:bg-gray-100">
+                    <Link
+                      to="/pricing"
+                      className="block px-4 py-2 hover:text-[#ccaa0d] transition"
+                    >
+                      Pricing
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
           <Link
             to="/contact"
             className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition"

@@ -77,9 +77,9 @@ const largePackages = [
 const PricingPlans = () => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    document.title = "Pricing Plans | IT Services";
-  }, []);
+  // useEffect(() => {
+  //   document.title = "Pricing Plans | IT Services";
+  // }, []);
 
   const handleGetPlan = (planTitle) => {
     navigate(`/plan-details/${planTitle}`);

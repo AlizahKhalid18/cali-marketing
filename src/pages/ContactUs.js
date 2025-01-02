@@ -3,8 +3,8 @@ import backgroundImage from "../assets/contact-bgimg.jpg";
 import emailjs from "emailjs-com";
 
 const ContactUs = () => {
-  const [isSubmitted, setIsSubmitted] = useState(false); // To handle submission status
-  const formRef = useRef(); // Reference for the form
+  const [isSubmitted, setIsSubmitted] = useState(false); 
+  const formRef = useRef(); 
   const messageSectionRef = useRef(null);
 
   const handleScroll = () => {
@@ -89,13 +89,13 @@ const ContactUs = () => {
             </ul>
           </div>
 
-          {/* Message Us */}
+         
           <div>
             <h4 className="text-lg font-semibold text-gray-800 mb-4">Message Us</h4>
             <form
               ref={formRef}
               className="space-y-4"
-              onSubmit={handleSubmit} // Trigger handleSubmit when form is submitted
+              onSubmit={handleSubmit} 
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input

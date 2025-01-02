@@ -5,7 +5,7 @@ import backgroundImage from "../assets/about-bg.jpg";
 const AboutUs = () => {
   return (
     <div>
-      {/* Hero Section */}
+     
       <section
         className="relative w-full h-[80vh] bg-cover bg-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
@@ -22,9 +22,9 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Content Section */}
+   
       <section className="flex flex-col md:flex-row items-center md:items-start gap-8 py-10 px-6">
-        {/* Image Section */}
+      
         <div className="w-full md:w-1/2">
           <img
             src={aboutusimg}
@@ -33,7 +33,7 @@ const AboutUs = () => {
           />
         </div>
 
-        {/* Text Section */}
+   
         <div className="w-full md:w-1/2 text-gray-700 space-y-4">
           <p>
             At <strong>Cali Marketing</strong>, we are dedicated to helping
@@ -63,9 +63,9 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Cards Section */}
+    
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 pb-10">
-        {/* Card 1 */}
+        
         <article className="bg-white shadow-lg rounded-lg p-6 border-t-4 border-[#ccaa0d]">
           <h3 className="text-lg font-bold mb-2">What We Do</h3>
           <p className="text-gray-600">
@@ -76,7 +76,7 @@ const AboutUs = () => {
           </p>
         </article>
 
-        {/* Card 2 */}
+     
         <article className="bg-white shadow-lg rounded-lg p-6 border-t-4 border-[#ccaa0d]">
           <h3 className="text-lg font-bold mb-2">Our Mission</h3>
           <p className="text-gray-600">
@@ -87,7 +87,7 @@ const AboutUs = () => {
           </p>
         </article>
 
-        {/* Card 3 */}
+    
         <article className="bg-white shadow-lg rounded-lg p-6 border-t-4 border-[#ccaa0d]">
           <h3 className="text-lg font-bold mb-2">Our Goal</h3>
           <p className="text-gray-600">
