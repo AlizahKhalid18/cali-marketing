@@ -79,7 +79,7 @@ const ContactUs = () => {
               </li>
               <li className="flex items-center mb-4">
                 <span className="text-blue-500 text-xl mr-4">📧</span>
-                <span>support@youritcompany.com</span>
+                <span>Calidigitalmarketing1@gmail.com</span>
               </li>
               <li className="flex items-center">
                 <span className="text-blue-500 text-xl mr-4">📍</span>
