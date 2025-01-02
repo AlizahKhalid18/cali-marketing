@@ -5,28 +5,24 @@ import { useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isResourcesDropdownOpen, setIsResourcesDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   const toggleServicesDropdown = () => {
     setIsServicesDropdownOpen(!isServicesDropdownOpen);
- 
+
     if (isResourcesDropdownOpen) setIsResourcesDropdownOpen(false);
   };
 
   const toggleResourcesDropdown = () => {
     setIsResourcesDropdownOpen(!isResourcesDropdownOpen);
-  
+
     if (isServicesDropdownOpen) setIsServicesDropdownOpen(false);
   };
 
@@ -48,17 +44,19 @@ const Header = () => {
   }, []);
 
   const isAboutPage = location.pathname === "/about";
+  const isFAQSection = location.pathname === "/faq";
 
   return (
     <header
       className={`flex justify-between items-center p-6 fixed top-0 left-0 w-full z-50 transition-colors duration-300
-         ${
-           isAboutPage
-             ? "bg-transparent"
-             : isScrolled
-             ? "bg-[#0d3880]"
-             : "bg-blue"
-         } text-[#ccaa0d]`}
+        ${
+          isFAQSection
+            ? "bg-[#0d3880]"
+            : isScrolled || isAboutPage
+            ? "bg-[#0d3880]"
+            : "bg-[transparent]"
+        }
+        text-[#ccaa0d]`}
     >
       <div>
         <img src={logo} alt="Cali Marketing Logo" className="h-10 w-auto" />
@@ -83,10 +81,7 @@ const Header = () => {
         >
           Work
         </Link>
-        <div
-          className="relative"
-          onClick={toggleServicesDropdown} 
-        >
+        <div className="relative" onClick={toggleServicesDropdown}>
           <span className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition cursor-pointer">
             Services
           </span>
@@ -95,60 +90,65 @@ const Header = () => {
               <ul className="py-2">
                 <li className="hover:bg-gray-100">
                   <Link
-                    to="/services/web-development"
+                    to="/services/website-design"
                     className="block px-4 py-2 hover:text-[#ccaa0d] transition"
                   >
-                    Web Development
+                    Website Design
                   </Link>
                 </li>
                 <li className="hover:bg-gray-100">
                   <Link
-                    to="/services/app-development"
+                    to="/services/seo"
                     className="block px-4 py-2 hover:text-[#ccaa0d] transition"
                   >
-                    Mobile App Development
+                    SEO
                   </Link>
                 </li>
                 <li className="hover:bg-gray-100">
                   <Link
-                    to="/services/ui-ux-design"
+                    to="/services/google-ads"
                     className="block px-4 py-2 hover:text-[#ccaa0d] transition"
                   >
-                    UI/UX Design
+                    Google Ads
                   </Link>
                 </li>
                 <li className="hover:bg-gray-100">
                   <Link
-                    to="/services/cloud-computing"
+                    to="/services/social-media"
                     className="block px-4 py-2 hover:text-[#ccaa0d] transition"
                   >
-                    Cloud Computing
+                    Social Media
                   </Link>
                 </li>
                 <li className="hover:bg-gray-100">
                   <Link
-                    to="/services/cyber-security"
+                    to="/services/email-marketing"
                     className="block px-4 py-2 hover:text-[#ccaa0d] transition"
                   >
-                    Cybersecurity
+                    Email Marketing
                   </Link>
                 </li>
                 <li className="hover:bg-gray-100">
                   <Link
-                    to="/services/it-consulting"
+                    to="/services/branding"
                     className="block px-4 py-2 hover:text-[#ccaa0d] transition"
                   >
-                    IT Consulting
+                    Branding
+                  </Link>
+                </li>
+                <li className="hover:bg-gray-100">
+                  <Link
+                    to="/services/1v1-marketing-consulting"
+                    className="block px-4 py-2 hover:text-[#ccaa0d] transition"
+                  >
+                    1v1 Marketing Consulting
                   </Link>
                 </li>
               </ul>
             </div>
           )}
         </div>
-        <div
-          className="relative"
-          onClick={toggleResourcesDropdown} 
-        >
+        <div className="relative" onClick={toggleResourcesDropdown}>
           <span className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition cursor-pointer">
             Resources
           </span>
@@ -212,7 +212,9 @@ const Header = () => {
       </div>
 
       <div
-        className={`md:hidden ${isOpen ? "block" : "hidden"} absolute top-16 left-0 w-full bg-[#0d3880] text-[#ccaa0d]`}
+        className={`md:hidden ${
+          isOpen ? "block" : "hidden"
+        } absolute top-16 left-0 w-full bg-[#0d3880] text-[#ccaa0d]`}
       >
         <nav className="flex flex-col items-center space-y-4 py-4">
           <Link
@@ -239,12 +241,12 @@ const Header = () => {
           <div className="relative">
             <span
               className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition cursor-pointer"
-              onClick={toggleDropdown}
+              onClick={toggleServicesDropdown}
             >
               Services
             </span>
-            {isDropdownOpen && (
-              <div className="absolute bg-[#0d3880] text-[#ccaa0d] shadow-md rounded-md mt-2 w-48">
+            {isServicesDropdownOpen && (
+              <div className="absolute bg-[#0d3880] text-[#ccaa0d] shadow-md rounded-md mt-2 w-48 z-50">
                 <ul className="py-2">
                   <li className="hover:bg-gray-100">
                     <Link
@@ -282,6 +284,7 @@ const Header = () => {
               </div>
             )}
           </div>
+
           <div className="relative">
             <span
               className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition cursor-pointer"
@@ -290,7 +293,7 @@ const Header = () => {
               Resources
             </span>
             {isResourcesDropdownOpen && (
-              <div className="absolute bg-[#0d3880] text-[#ccaa0d] shadow-md rounded-md mt-2 w-48">
+              <div className="absolute bg-[#0d3880] text-[#ccaa0d] shadow-md rounded-md mt-2 w-48 z-50">
                 <ul className="py-2">
                   <li className="hover:bg-gray-100">
                     <Link
@@ -312,12 +315,13 @@ const Header = () => {
               </div>
             )}
           </div>
+
           <Link
             to="/contact"
             className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition"
             onClick={toggleMenu}
           >
-            Contact Us
+            CONTACT US →
           </Link>
         </nav>
       </div>

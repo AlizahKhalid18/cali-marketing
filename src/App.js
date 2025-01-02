@@ -14,6 +14,7 @@ import OurApproach from "./components/OurApproach";
 import Footer from "./components/Footer";
 import PlanDetails from "./pages/PlanDetails";
 import KnowOurStory from "./components/KnowOurStory";
+import FAQSection from "./components/FAQSection";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/pricing" element={<PricingData/>} />
           <Route path="/plan-details/:planTitle" element={<PlanDetails />} />
+          <Route path="/faq" element={< FAQSection />} />
         </Routes>
         <Footer/>
       </div>
