@@ -214,7 +214,7 @@ const Header = () => {
       <div
         className={`md:hidden ${
           isOpen ? "block" : "hidden"
-        } absolute top-16 left-0 w-full bg-black-500 text-[#ccaa0d]`}
+        } absolute top-16 left-0 w-full bg-[#0d3880] text-[#ccaa0d]`}
       >
         <nav className="flex flex-col items-center space-y-4 py-4">
           <Link
