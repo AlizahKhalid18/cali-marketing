@@ -214,7 +214,7 @@ const Header = () => {
       <div
         className={`md:hidden ${
           isOpen ? "block" : "hidden"
-        } absolute top-16 left-0 w-full bg-[#0d3880] text-[#ccaa0d]`}
+        } absolute top-16 left-0 w-full bg-black-500 text-[#ccaa0d]`}
       >
         <nav className="flex flex-col items-center space-y-4 py-4">
           <Link
@@ -250,34 +250,58 @@ const Header = () => {
                 <ul className="py-2">
                   <li className="hover:bg-gray-100">
                     <Link
-                      to="/services/web-development"
+                      to="/services/website-design"
                       className="block px-4 py-2 hover:text-[#ccaa0d] transition"
                     >
-                      Web Development
+                      Website Design
                     </Link>
                   </li>
                   <li className="hover:bg-gray-100">
                     <Link
-                      to="/services/app-development"
+                      to="/services/seo"
                       className="block px-4 py-2 hover:text-[#ccaa0d] transition"
                     >
-                      Mobile App Development
+                      SEO
                     </Link>
                   </li>
                   <li className="hover:bg-gray-100">
                     <Link
-                      to="/services/ui-ux-design"
+                      to="/services/google-ads"
                       className="block px-4 py-2 hover:text-[#ccaa0d] transition"
                     >
-                      UI/UX Design
+                      Google Ads
                     </Link>
                   </li>
                   <li className="hover:bg-gray-100">
                     <Link
-                      to="/services/cloud-computing"
+                      to="/services/social-media"
                       className="block px-4 py-2 hover:text-[#ccaa0d] transition"
                     >
-                      Cloud Computing
+                      Social Media
+                    </Link>
+                  </li>
+                  <li className="hover:bg-gray-100">
+                    <Link
+                      to="/services/email-marketing"
+                      className="block px-4 py-2 hover:text-[#ccaa0d] transition"
+                    >
+                      Email Marketing
+                    </Link>
+                  </li>
+                  <li className="hover:bg-gray-100">
+                    <Link
+                      to="/services/branding"
+                      className="block px-4 py-2 hover:text-[#ccaa0d] transition"
+                    >
+                      Branding
+                    </Link>
+                  </li>
+                  <li className="hover:bg-gray-100">
+                    <Link
+                      to="/services/1v1-marketing-consulting"
+                      className="block px-4 py-2 hover:text-[#ccaa0d] transition"
+                    >
+                      1v1 Marketing Consulting
                     </Link>
                   </li>
                 </ul>
