@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import LogoSlider from "./components/LogoSlider";
 import ServicesSection from "./components/ServicesSection";
-import ITServicesSection from "./components/ItServices";
+import OurServicesSection from "./components/OurServices";
 import AboutUs from "./pages/AboutUs";
 import "./App.css";
 import WhyCaliMarketing from "./components/WhyCaliMarketing";
@@ -15,6 +15,7 @@ import Footer from "./components/Footer";
 import PlanDetails from "./pages/PlanDetails";
 import KnowOurStory from "./components/KnowOurStory";
 import FAQSection from "./components/FAQSection";
+import OurWorks from "./components/OurWorks";
 
 function App() {
   return (
@@ -29,20 +30,21 @@ function App() {
                 <Hero />
                 <LogoSlider />
                 <ServicesSection />
-                <ITServicesSection />
+                <OurServicesSection />
                 <WhyCaliMarketing />
-                <OurApproach/>
-                <KnowOurStory/>
+                <OurApproach />
+                <KnowOurStory />
               </>
             }
           />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
-          <Route path="/pricing" element={<PricingData/>} />
+          <Route path="/pricing" element={<PricingData />} />
           <Route path="/plan-details/:planTitle" element={<PlanDetails />} />
-          <Route path="/faq" element={< FAQSection />} />
+          <Route path="/faq" element={<FAQSection />} />
+          <Route path="/work" element={<OurWorks />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </div>
     </Router>
   );
