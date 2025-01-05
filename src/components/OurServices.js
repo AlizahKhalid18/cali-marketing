@@ -123,7 +123,7 @@ const ITServicesSection = () => {
                   {service.description}
                 </p>
 
-                <button className="mt-4 px-6 py-2 text-[#0d3880] rounded-full flex items-center text-sm font-bold text-white hover:bg-[#ccaa0d] transition">
+                <button className="mt-4 bg-[#ccaa0d] px-6 py-2 text-[#0d3880] rounded-full flex items-center text-sm font-bold text-white hover:bg-[#ccaa0d] transition">
                   LEARN MORE <FaArrowRight className="ml-2" />
                 </button>
               </div>
