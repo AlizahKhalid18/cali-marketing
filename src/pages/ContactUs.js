@@ -75,7 +75,7 @@ const ContactUs = () => {
             <ul>
               <li className="flex items-center mb-4">
                 <span className="text-blue-500 text-xl mr-4">📞</span>
-                <span>+1 (424) 522-4854</span>
+                <span>+1 (714) 386-9805</span>
               </li>
               <li className="flex items-center mb-4">
                 <span className="text-blue-500 text-xl mr-4">📧</span>
