@@ -10,16 +10,16 @@ const AboutUs = () => {
         className="relative w-full h-[80vh] bg-cover bg-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="absolute inset-0 flex flex-col items-start justify-center text-left text-white px-6 md:px-20">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Explore Our Pricing Plans
-          </h1>
-          <p className="text-lg md:text-xl max-w-xl mb-8">
-            Find the perfect plan for your business. Scalable, flexible, and
-            designed to meet your needs.
-          </p>
-        </div>
+   <div className="absolute inset-0 bg-black opacity-50"></div>
+<div className="absolute inset-0 flex flex-col items-start justify-center text-left text-white px-6 md:px-20">
+  <h1 className="text-4xl md:text-5xl font-bold mb-6">
+    About Us
+  </h1>
+  <p className="text-lg md:text-xl max-w-xl mb-8">
+    Learn more about our journey, values, and commitment to delivering exceptional services.
+  </p>
+</div>
+
       </section>
 
    
