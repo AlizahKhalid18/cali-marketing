@@ -33,33 +33,31 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > window.innerHeight - 120);
+      
+      setIsScrolled(window.scrollY > 10);
     };
-
+  
     window.addEventListener("scroll", handleScroll);
-
+  
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  
 
   const isAboutPage = location.pathname === "/about";
   const isFAQSection = location.pathname === "/faq";
 
   return (
     <header
-      className={`flex justify-between items-center p-6 fixed top-0 left-0 w-full z-50 transition-colors duration-300
+      className={`flex justify-between items-center p-6 fixed top-0 left-0 w-full z-50 transition-colors duration-300 hover:bg-[#0d3880]
+        
         ${
-          isFAQSection
-            ? "bg-[#0d3880]"
-            : isScrolled || isAboutPage
-            ? "bg-[#0d3880]"
-            : "bg-[transparent]"
-        }
-        text-[#ccaa0d]`}
+        isFAQSection || isScrolled || isAboutPage ? "bg-[#0d3880]" : "bg-transparent"
+      } text-[#ccaa0d]`}
     >
       <div>
-        <img src={logo} alt="Cali Marketing Logo" className="h-10 w-auto" />
+        <img src={logo} alt="Cali Marketing Logo" className="h-[45px] w-auto" />
       </div>
 
       <nav className="hidden md:flex space-x-8">
@@ -180,7 +178,7 @@ const Header = () => {
       </nav>
 
       <div className="hidden md:flex items-center space-x-4">
-        <span className="text-[#ccaa0d] font-medium">+1 (424) 522-4854</span>
+        <span className="text-[#ccaa0d] font-medium">+1 (714) 386-9805</span>
         <Link
           to="/contact"
           className="border-2 border-[#ccaa0d] px-4 py-1 rounded-full hover:bg-[#ccaa0d] hover:text-[#0d3880] transition text-center"
