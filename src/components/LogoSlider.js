@@ -40,7 +40,7 @@ const LogoSlider = () => {
   ];
 
   return (
-    <div className="logo-slider-container py-3">
+    <div className="logo-slider-container py-3 bg-white">
       <Slider {...settings}>
         {logos.map((logo) => (
           <div key={logo.id} className="logo-slide">

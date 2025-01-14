@@ -5,7 +5,7 @@ import "animate.css";
 const Hero = () => {
   return (
     <section
-      className="relative bg-center bg-no-repeat text-white flex items-center justify-center"
+      className="sticky top-0 z-[-1] bg-center bg-no-repeat text-white flex items-center justify-center"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: "cover",

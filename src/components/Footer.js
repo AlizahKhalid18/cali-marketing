@@ -12,7 +12,7 @@ import {
 function Footer() {
   return (
     <footer
-      className="bg-[#0d3880] text-white py-10 bg-cover bg-center"
+      className="sticky  z-[-1]  bg-[#0d3880] text-white py-10 bg-cover bg-center"
       style={{
         backgroundImage: `url(${backgroundImg})`,
       }}
@@ -56,21 +56,7 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div>
-            <h2 className="text-lg font-semibold mb-4">Industries</h2>
-            <ul className="space-y-2">
-              <li className="hover:underline cursor-pointe text-smr">
-                Healthcare
-              </li>
-              <li className="hover:underline cursor-pointer text-sm">
-                Finance
-              </li>
-              <li className="hover:underline cursor-pointer text-sm">Retail</li>
-              <li className="hover:underline cursor-pointer text-sm">
-                Education
-              </li>
-            </ul>
-          </div>
+
           <div>
             <h2 className="text-lg font-semibold mb-4">Company</h2>
             <ul className="space-y-2">
@@ -101,8 +87,52 @@ function Footer() {
               <li className="hover:underline cursor-pointer text-sm">FAQ</li>
             </ul>
           </div>
+          <div>
+            <h2 className="text-lg font-semibold mb-4 text-center">
+              Follow Us
+            </h2>
+            <div className="flex justify-center flex-wrap space-x-6 mb-4">
+              <a
+                href="#"
+                className="text-white hover:text-gray-300 transition duration-300"
+                aria-label="Facebook"
+              >
+                <FaFacebookF className="text-2xl" />
+              </a>
+              <a
+                href="#"
+                className="text-white hover:text-gray-300 transition duration-300"
+                aria-label="Twitter"
+              >
+                <FaTwitter className="text-2xl" />
+              </a>
+              <a
+                href="#"
+                className="text-white hover:text-gray-300 transition duration-300"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="text-2xl" />
+              </a>
+            </div>
+            <div className="flex justify-center space-x-6">
+              <a
+                href="#"
+                className="text-white hover:text-gray-300 transition duration-300"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedinIn className="text-2xl" />
+              </a>
+              <a
+                href="#"
+                className="text-white hover:text-gray-300 transition duration-300"
+                aria-label="GitHub"
+              >
+                <FaGithub className="text-2xl" />
+              </a>
+            </div>
+          </div>
         </div>
-
+        {/*        
         <div className="text-center mb-8">
           <h2 className="text-lg font-semibold mb-4">Follow Us</h2>
           <div className="flex justify-center space-x-6">
@@ -146,7 +176,7 @@ function Footer() {
               <FaGithub className="text-2xl" />
             </a>
           </div>
-        </div>
+        </div> */}
 
         <div className="text-center text-sm opacity-75">
           © {new Date().getFullYear()} CALI DIGITAL MARKETING. All Rights

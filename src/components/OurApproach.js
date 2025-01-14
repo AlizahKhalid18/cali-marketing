@@ -110,7 +110,7 @@ const OurApproach = () => {
   const [activeService, setActiveService] = useState("website");
 
   return (
-    <section className="bg-black text-white py-16 px-6 mb-10">
+    <section className="bg-black text-white py-16 px-6 ">
       <div className="container mx-auto">
        
         <div className="flex flex-col md:flex-row justify-between items-center mb-10">

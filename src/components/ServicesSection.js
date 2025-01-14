@@ -50,7 +50,7 @@ const ServicesSection = () => {
         "Offer personalized one-on-one marketing consultations to develop strategies that align with your business goals and drive measurable results.",
     },
   ];
-  
+
   const [activeIndex, setActiveIndex] = useState(0);
 
   const { ref, inView } = useInView({
@@ -60,10 +60,16 @@ const ServicesSection = () => {
 
   return (
     <div
+      id="services-section"
       ref={ref}
       className={`services-container flex flex-col md:flex-row items-center justify-between p-8 bg-white text-[#ccaa0d] rounded-lg shadow-lg ${
         inView ? "animate__animated animate__fadeInUp" : "opacity-0"
       }`}
+      style={{
+    
+      
+        transition: "transform 0.5s ease, opacity 0.5s ease", 
+      }}
     >
       <div
         className={`image-container w-full md:w-1/2 flex justify-center md:justify-start ${
