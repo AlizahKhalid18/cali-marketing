@@ -214,7 +214,7 @@ const Header = () => {
           isOpen ? "block" : "hidden"
         } absolute top-16 left-0 w-full bg-[#0d3880] text-[#ccaa0d]`}
       >
-        <nav className="flex flex-col items-center space-y-4 py-4">
+        <nav className="flex ms-[45vw] flex-col  space-y-3 py-5">
           <Link
             to="/"
             className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition"
@@ -235,6 +235,13 @@ const Header = () => {
             onClick={toggleMenu}
           >
             Work
+          </Link>
+          <Link
+            to="/work"
+            className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition"
+            onClick={toggleMenu}
+          >
+            Contact
           </Link>
           <div className="relative">
             <span
@@ -335,16 +342,14 @@ const Header = () => {
                   </li>
                 </ul>
               </div>
+              
             )}
+       
+       
+           
+        
           </div>
-
-          <Link
-            to="/contact"
-            className="font-bold px-4 py-2 border-b-2 border-transparent hover:border-[#ccaa0d] transition"
-            onClick={toggleMenu}
-          >
-            CONTACT US 
-          </Link>
+         
         </nav>
       </div>
     </header>
