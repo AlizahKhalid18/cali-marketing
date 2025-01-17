@@ -7,13 +7,12 @@ const Hero = () => {
     <section className="custom-bg-section text-white flex items-center justify-center relative">
       <div className="text-center px-4 py-4 md:py-8 bg-black bg-opacity-50 rounded-lg animate__animated animate__fadeIn animate__delay-1s">
         <h2 className="heading text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl font-semibold leading-tight">
-          Transforming Digital Ideas <br /> into Profitable Solutions
+          Transforming Digital Ideas <br /> into ProfitableSolutions
         </h2>
-        <p className="para text-1xl sm:text-2xl md:text-xl lg:text-2xl xl:text-2xl">
-          AT CALI DIGITAL MARKETING, 
-          WE OFFER CUSTOMIZED SOFTWARE SOLUTIONS FOR BUSINESSES OF ALL SIZES,
-          COVERING <br />
-          WEBSITE DESIGN, SEO, GOOGLE ADS, SOCIAL MEDIA, EMAIL MARKETING, 
+        <p className="para text-[8px] sm:text-sm md:text-base lg:text-lg xl:text-xl">
+          AT CALI DIGITAL MARKETING, WE OFFER CUSTOMIZED SOFTWARE SOLUTIONS FOR
+          BUSINESSES OF ALL SIZES <br />
+          WEBSITE DESIGN, SEO, GOOGLE ADS, SOCIAL MEDIA, EMAIL MARKETING,
           BRANDING, 1V1 MARKETING CONSULTING
         </p>
       </div>

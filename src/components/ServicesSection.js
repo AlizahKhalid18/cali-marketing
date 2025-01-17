@@ -51,7 +51,7 @@ const ServicesSection = () => {
     },
     {
       id: "08",
-      title: "1V1 Marketing Consulting",
+      title: "Marketing Consulting",
       description:
         "Offer personalized one-on-one marketing consultations to develop strategies that align with your business goals and drive measurable results.",
     },
