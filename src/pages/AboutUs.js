@@ -2,10 +2,11 @@ import React from "react";
 import aboutusimg from "../assets/aboutusimg.jpg";
 import backgroundImage from "../assets/about-bg.jpg";
 
+
 const AboutUs = () => {
   return (
     <div>
-     
+    
       <section
         className="relative w-full h-[80vh] bg-cover bg-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}

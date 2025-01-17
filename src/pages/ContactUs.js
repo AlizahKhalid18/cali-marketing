@@ -7,36 +7,38 @@ const ContactUs = () => {
   const formRef = useRef(); 
   const messageSectionRef = useRef(null);
 
+  // Scroll function to smoothly scroll to message section
   const handleScroll = () => {
     messageSectionRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
-
+    // Sending form data using EmailJS
     emailjs
       .sendForm(
-        "service_50ab77s",   
-        "template_qikb89t",          
-        formRef.current,    
-        "ch-SrRSoIpVj8r5Yi"  
+        "service_g2fy4de",  // Replace with your actual service ID
+        "template_nfyt7bn",  // Replace with your actual template ID
+        formRef.current,     // Form reference
+        "O1701wAG3avkz2O3F"  // Replace with your actual user ID from EmailJS
       )
       .then(
         (result) => {
           console.log("Message Sent: ", result.text); 
-          setIsSubmitted(true);
-          formRef.current.reset(); 
+          setIsSubmitted(true); // Set submission status to true
+          formRef.current.reset(); // Reset the form after successful submission
         },
         (error) => {
-          console.log("Error: ", error.text); 
+          console.log("Error: ", error.text); // Log error if submission fails
         }
       );
   };
 
   return (
     <div>
- 
+      {/* Hero Section */}
       <section
         className="relative w-full h-[80vh] bg-cover bg-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
@@ -56,6 +58,7 @@ const ContactUs = () => {
         </div>
       </section>
 
+      
       <section
         ref={messageSectionRef}
         className="py-12 px-4 md:px-20 bg-gray-50"
@@ -66,7 +69,7 @@ const ContactUs = () => {
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-         
+        
           <div>
             <h4 className="text-lg font-semibold text-gray-800 mb-4">Get in Touch</h4>
             <p className="text-gray-600 mb-4">
@@ -83,13 +86,12 @@ const ContactUs = () => {
               </li>
               <li className="flex items-center">
                 <span className="text-blue-500 text-xl mr-4">📍</span>
-                <span>1141 Pomona Road , Corona , Los Angeles
-                CA 92882</span>
+                <span>1141 Pomona Road , Corona , Los Angeles CA 92882</span>
               </li>
             </ul>
           </div>
 
-         
+    
           <div>
             <h4 className="text-lg font-semibold text-gray-800 mb-4">Message Us</h4>
             <form
@@ -134,6 +136,7 @@ const ContactUs = () => {
               </button>
             </form>
 
+        
             {isSubmitted && (
               <p className="mt-4 text-green-500">
                 Thank you for your message! We will get back to you soon.

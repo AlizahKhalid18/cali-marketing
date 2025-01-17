@@ -10,6 +10,7 @@ import uiuxDesignImage from "../assets/it-serviceimg3.jpg";
 import cybersecurityImage from "../assets/it-servisceimg4.jpg";
 import branding from "../assets/it-serviceimg5.webp";
 import Marketing from "../assets/it-serviceimg6.webp";
+import facebook from "../assets/it-serviceimg7.jpg";
 
 const itServicesData = [
   {
@@ -34,29 +35,36 @@ const itServicesData = [
     image: mobileAppDevImage,
   },
   {
-    id: 4,
+    "id": 4,
+    "title": "Facebook Ads",
+    "description": "We specialize in creating impactful Facebook Ads campaigns that target your ideal audience. Our data-driven strategies focus on maximizing engagement, driving high-quality leads, and boosting your brand's visibility and sales.",
+    "image": facebook
+  },
+  
+  {
+    id: 5,
     title: "Social Media",
     description:
       "Our social media marketing services help you build a strong online presence. We manage your social media accounts, create engaging content, and run targeted campaigns to connect with your audience and drive conversions.",
     image: uiuxDesignImage,
   },
   {
-    id: 5,
+    id: 6,
     title: "Email Marketing",
     description:
       "We craft personalized email marketing campaigns that engage your audience and drive action. From newsletters to promotional emails, we help you build meaningful relationships with your customers through effective communication.",
     image: cybersecurityImage,
   },
   {
-    id: 6,
+    id: 7,
     title: "Branding",
     description:
       "We help businesses build a strong, recognizable brand. Our branding services include logo design, brand messaging, and visual identity, all aimed at ensuring consistency and a memorable impression in the market.",
     image: branding,
   },
   {
-    id: 7,
-    title: "1V1 Marketing Consulting",
+    id: 8,
+    title: "Marketing Consulting",
     description:
       "Our one-on-one marketing consulting services provide tailored strategies for your business. We analyze your goals and offer expert advice to help you optimize your marketing efforts, boost growth, and enhance your online presence.",
     image: Marketing,

@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-import { FaLaptopCode, FaChartLine, FaGoogle, FaUsers, FaEnvelope, FaBrush, FaChalkboardTeacher } from "react-icons/fa";
+import { FaLaptopCode, FaChartLine, FaGoogle, FaUsers, FaEnvelope, FaBrush, FaChalkboardTeacher, FaFacebook } from "react-icons/fa";
 
 
 const services = [
   { name: "Website Design", id: "website", icon: <FaLaptopCode className="text-3xl" /> },
   { name: "SEO", id: "seo", icon: <FaChartLine className="text-3xl" /> },
   { name: "Google Ads", id: "google-ads", icon: <FaGoogle className="text-3xl" /> },
+  { name: "Facebook Ads", id: "facebook-ads", icon: <FaFacebook className="text-3xl" /> },
   { name: "Social Media", id: "social-media", icon: <FaUsers className="text-3xl" /> },
   { name: "Email Marketing", id: "email-marketing", icon: <FaEnvelope className="text-3xl" /> },
   { name: "Branding", id: "branding", icon: <FaBrush className="text-3xl" /> },
-  { name: "1V1 Marketing Consulting", id: "consulting", icon: <FaChalkboardTeacher className="text-3xl" /> },
+  { name: "Marketing Consulting", id: "consulting", icon: <FaChalkboardTeacher className="text-3xl" /> },
 ];
 
 const ServiceDetails = {
@@ -52,6 +53,19 @@ const ServiceDetails = {
     ],
     image: <FaGoogle className="text-[12rem] text-[#0d3880]" />,
   },
+  "facebook-ads": {
+    title: "Facebook Ads",
+    description:
+      "Harness the power of Facebook Ads to connect with your ideal audience, increase engagement, and drive conversions with precision targeting.",
+    points: [
+      "Custom audience targeting",
+      "Ad creative and copy optimization",
+      "Campaign budget management",
+      "Conversion tracking and insights",
+      "Comprehensive performance reporting",
+    ],
+    image: <FaFacebook className="text-[12rem] text-[#0d3880]" />,
+  },
   "social-media": {
     title: "Social Media",
     description:
@@ -92,7 +106,7 @@ const ServiceDetails = {
     image: <FaBrush className="text-[12rem] text-[#0d3880]" />,
   },
   consulting: {
-    title: "1V1 Marketing Consulting",
+    title: "Marketing Consulting",
     description:
       "Work one-on-one with our experts to develop personalized marketing strategies for your business.",
     points: [

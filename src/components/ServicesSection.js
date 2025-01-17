@@ -26,25 +26,31 @@ const ServicesSection = () => {
         "Create and manage data-driven Google Ads campaigns to maximize reach, engagement, and conversions for your business.",
     },
     {
-      id: "04",
+      "id": "04",
+      "title": "Facebook Ads",
+      "description": "Develop and optimize targeted Facebook Ads campaigns to enhance brand visibility, drive engagement, and boost conversions, leveraging audience insights and data-driven strategies."
+    },
+    
+    {
+      id: "05",
       title: "Social Media",
       description:
         "Develop impactful social media strategies and create engaging content to grow your brand's presence across platforms like Facebook, Instagram, and LinkedIn.",
     },
     {
-      id: "05",
+      id: "06",
       title: "Email Marketing",
       description:
         "Craft compelling email campaigns that nurture leads, engage customers, and drive conversions through personalized communication.",
     },
     {
-      id: "06",
+      id: "07",
       title: "Branding",
       description:
         "Build a strong and memorable brand identity with professional logo design, consistent visuals, and cohesive messaging tailored to your business.",
     },
     {
-      id: "07",
+      id: "08",
       title: "1V1 Marketing Consulting",
       description:
         "Offer personalized one-on-one marketing consultations to develop strategies that align with your business goals and drive measurable results.",

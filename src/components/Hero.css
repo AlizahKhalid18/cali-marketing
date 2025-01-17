@@ -1,0 +1,23 @@
+.custom-bg-section {
+    background-image: url('../assets/header-bg.gif');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: -1;
+  }
+  .heading{
+    /* font-size: 4vw; */
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .para{
+font-size: 17px;
+    text-align: start;
+    margin: auto;
+  
+  }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -16,8 +16,26 @@ import PlanDetails from "./pages/PlanDetails";
 import KnowOurStory from "./components/KnowOurStory";
 import FAQSection from "./components/FAQSection";
 import OurWorks from "./components/OurWorks";
+import logo from "../src/assets/logo.jpg"
+import AOS from "aos";
 
 function App() {
+  useEffect(() => {
+
+    document.title = "CALI DIGITAL MARKETING";
+
+   
+    const link = document.querySelector("link[rel='icon']");
+    if (link) {
+      link.setAttribute("href", logo); 
+      link.setAttribute("sizes", "32x32"); 
+    }
+  }, []);
+
+  useEffect(() => {
+    AOS.init(); 
+  }, []);
+
   return (
     <Router>
       <div className="App">
