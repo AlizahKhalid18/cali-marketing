@@ -96,7 +96,7 @@ function Footer() {
               ))}
             </div>
           </div>
-          export default FollowUs;
+        
         </div>
 
         <div className="text-center text-sm opacity-75">
