@@ -340,10 +340,10 @@ const Header = () => {
 
           <Link
             to="/contact"
-            className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition"
+            className="font-bold px-4 py-2 border-b-2 border-transparent hover:border-[#ccaa0d] transition"
             onClick={toggleMenu}
           >
-            CONTACT US →
+            CONTACT US 
           </Link>
         </nav>
       </div>
