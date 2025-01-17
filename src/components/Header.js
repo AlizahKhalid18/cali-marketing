@@ -214,7 +214,7 @@ const Header = () => {
           isOpen ? "block" : "hidden"
         } absolute top-16 left-0 w-full bg-[#0d3880] text-[#ccaa0d]`}
       >
-        <nav className="flex ms-[45vw] flex-col  space-y-3 py-5">
+        <nav className="flex text-center flex-col  space-y-3 py-5">
           <Link
             to="/"
             className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition"
