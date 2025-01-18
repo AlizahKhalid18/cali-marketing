@@ -237,7 +237,7 @@ const Header = () => {
             Work
           </Link>
           <Link
-            to="/work"
+            to="/contact"
             className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition"
             onClick={toggleMenu}
           >
@@ -306,7 +306,7 @@ const Header = () => {
                       to="/services/1v1-marketing-consulting"
                       className="block px-4 py-2 hover:text-[#ccaa0d] transition"
                     >
-                      1v1 Marketing Consulting
+                      Marketing Consulting
                     </Link>
                   </li>
                 </ul>
