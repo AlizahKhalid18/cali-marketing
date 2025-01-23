@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { useLocation } from "react-router-dom";
@@ -9,6 +9,8 @@ const Header = () => {
   const [isResourcesDropdownOpen, setIsResourcesDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const servicesDropdownRef = useRef(null);
+  const resourcesDropdownRef = useRef(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -16,13 +18,11 @@ const Header = () => {
 
   const toggleServicesDropdown = () => {
     setIsServicesDropdownOpen(!isServicesDropdownOpen);
-
     if (isResourcesDropdownOpen) setIsResourcesDropdownOpen(false);
   };
 
   const toggleResourcesDropdown = () => {
     setIsResourcesDropdownOpen(!isResourcesDropdownOpen);
-
     if (isServicesDropdownOpen) setIsServicesDropdownOpen(false);
   };
 
@@ -33,17 +33,38 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      
       setIsScrolled(window.scrollY > 10);
     };
-  
+
     window.addEventListener("scroll", handleScroll);
-  
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        servicesDropdownRef.current &&
+        !servicesDropdownRef.current.contains(event.target)
+      ) {
+        setIsServicesDropdownOpen(false);
+      }
+      if (
+        resourcesDropdownRef.current &&
+        !resourcesDropdownRef.current.contains(event.target)
+      ) {
+        setIsResourcesDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const isAboutPage = location.pathname === "/about";
   const isFAQSection = location.pathname === "/faq";
@@ -51,10 +72,9 @@ const Header = () => {
   return (
     <header
       className={`flex justify-between items-center p-6 fixed top-0 left-0 w-full z-50 transition-colors duration-300 hover:bg-[#0d3880]
-        
         ${
-        isFAQSection || isScrolled || isAboutPage ? "bg-[#0d3880]" : "bg-transparent"
-      } text-[#ccaa0d]`}
+          isFAQSection || isScrolled || isAboutPage ? "bg-[#0d3880]" : "bg-transparent"
+        } text-[#ccaa0d]`}
     >
       <div>
         <img src={logo} alt="Cali Marketing Logo" className="h-[45px] w-auto" />
@@ -79,7 +99,14 @@ const Header = () => {
         >
           Work
         </Link>
-        <div className="relative" onClick={toggleServicesDropdown}>
+        <Link
+          to="/career"
+          className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition"
+        >
+          
+          Career
+        </Link>
+        <div ref={servicesDropdownRef} className="relative" onClick={toggleServicesDropdown}>
           <span className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition cursor-pointer">
             Services
           </span>
@@ -146,7 +173,7 @@ const Header = () => {
             </div>
           )}
         </div>
-        <div className="relative" onClick={toggleResourcesDropdown}>
+        <div ref={resourcesDropdownRef} className="relative" onClick={toggleResourcesDropdown}>
           <span className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition cursor-pointer">
             Resources
           </span>
@@ -210,40 +237,45 @@ const Header = () => {
       </div>
 
       <div
-        className={`md:hidden ${
-          isOpen ? "block" : "hidden"
-        } absolute top-16 left-0 w-full bg-[#0d3880] text-[#ccaa0d]`}
+        className={`md:hidden ${isOpen ? "block" : "hidden"} absolute top-16 left-0 w-full bg-[#0d3880] text-[#ccaa0d]`}
       >
-        <nav className="flex text-center flex-col  space-y-3 py-5">
+        <nav className="flex text-center flex-col space-y-3 py-5">
           <Link
             to="/"
-            className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition"
+            className="font-bold border-b-2 border-transparent  transition"
             onClick={toggleMenu}
           >
             Home
           </Link>
           <Link
             to="/about"
-            className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition"
+            className="font-bold border-b-2 border-transparent transition"
             onClick={toggleMenu}
           >
             About
           </Link>
           <Link
             to="/work"
-            className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition"
+            className="font-bold border-b-2 border-transparent  transition"
             onClick={toggleMenu}
           >
             Work
           </Link>
           <Link
             to="/contact"
-            className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition"
+            className="font-bold border-b-2 border-transparent transition"
             onClick={toggleMenu}
           >
             Contact
           </Link>
-          <div className="relative">
+          <Link
+          to="/career"
+          className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition"
+        >
+          
+          Career
+        </Link>
+          <div ref={servicesDropdownRef} className="relative">
             <span
               className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition cursor-pointer"
               onClick={toggleServicesDropdown}
@@ -314,7 +346,7 @@ const Header = () => {
             )}
           </div>
 
-          <div className="relative">
+          <div ref={resourcesDropdownRef} className="relative">
             <span
               className="font-bold border-b-2 border-transparent hover:border-[#ccaa0d] transition cursor-pointer"
               onClick={toggleResourcesDropdown}
@@ -342,14 +374,8 @@ const Header = () => {
                   </li>
                 </ul>
               </div>
-              
             )}
-       
-       
-           
-        
           </div>
-         
         </nav>
       </div>
     </header>

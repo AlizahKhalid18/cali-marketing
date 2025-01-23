@@ -18,6 +18,7 @@ import FAQSection from "./components/FAQSection";
 import OurWorks from "./components/OurWorks";
 import logo from "../src/assets/logo.jpg"
 import AOS from "aos";
+import Career from "./pages/Career";
 
 function App() {
   useEffect(() => {
@@ -61,6 +62,7 @@ function App() {
           <Route path="/plan-details/:planTitle" element={<PlanDetails />} />
           <Route path="/faq" element={<FAQSection />} />
           <Route path="/work" element={<OurWorks />} />
+          <Route path="/career" element={<Career />} />
         </Routes>
         <Footer />
       </div>

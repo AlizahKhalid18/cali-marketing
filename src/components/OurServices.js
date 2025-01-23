@@ -52,7 +52,7 @@ const itServicesData = [
     id: 6,
     title: "Email Marketing",
     description:
-      "We craft personalized email marketing campaigns that engage your audience and drive action. From newsletters to promotional emails, we help you build meaningful relationships with your customers through effective communication.",
+      "We craft personalized email marketing campaigns that engage your audience and drive action. From newsletters to promotional emails, we help you build meaningful relationships with your customers.",
     image: cybersecurityImage,
   },
   {
@@ -114,31 +114,33 @@ const ITServicesSection = () => {
       </p>
 
       <Slider {...sliderSettings}>
-        {itServicesData.map((service) => (
-          <div key={service.id} className="p-2">
-            <div className="bg-white text-black rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition">
-              <div className="h-64 w-full overflow-hidden">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="h-full w-full object-cover transition-transform duration-300 hover:scale-110"
-                />
-              </div>
+  {itServicesData.map((service) => (
+    <div key={service.id} className="p-2 h-full" style={{height:"100vh"}}>
+      <div className="bg-white text-black rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col h-full">
+        <div className="h-64 w-full overflow-hidden">
+          <img
+            src={service.image}
+            alt={service.title}
+            className="h-full w-full object-cover transition-transform duration-300 hover:scale-110"
+          />
+        </div>
 
-              <div className="p-4">
-                <h3 className="text-lg font-bold">{service.title}</h3>
-                <p className="text-sm text-gray-700 mt-2">
-                  {service.description}
-                </p>
+        <div className="p-4 flex-1 flex flex-col">
+          <h3 className="text-lg font-bold">{service.title}</h3>
+          <p className="text-sm text-gray-700 mt-2 flex-1">
+            {service.description}
+          </p>
 
-                <button className="mt-4 bg-[#ccaa0d] px-6 py-2 text-[#0d3880] rounded-full flex items-center text-sm font-bold text-white hover:bg-[#ccaa0d] transition">
+          <button className="mt-4 bg-[#ccaa0d] px-6 py-2 text-[#0d3880] rounded-full flex items-center text-sm font-bold text-white hover:bg-[#ccaa0d] transition">
                   LEARN MORE <FaArrowRight className="ml-2" />
                 </button>
-              </div>
-            </div>
-          </div>
-        ))}
-      </Slider>
+        </div>
+      </div>
+    </div>
+  ))}
+</Slider>
+
+
     </section>
   );
 };

@@ -17,7 +17,7 @@ const AboutUs = () => {
     About Us
   </h1>
   <p className="text-lg md:text-xl max-w-xl mb-8">
-    Learn more about our journey, values, and commitment to delivering exceptional services.
+    Experts in increasing business's digiital and online presence.
   </p>
 </div>
 
@@ -37,7 +37,7 @@ const AboutUs = () => {
    
         <div className="w-full md:w-1/2 text-gray-700 space-y-4">
           <p>
-            At <strong>Cali Marketing</strong>, we are dedicated to helping
+            At <strong>Cali Digital Marketing</strong>, we are dedicated to helping
             businesses thrive in the digital world. Our expert team specializes
             in cutting-edge technologies and proven strategies to ensure your
             brand stands out in today's competitive market.
@@ -56,7 +56,7 @@ const AboutUs = () => {
             target audience.
           </p>
           <p>
-            At Cali Marketing, we believe in innovation, integrity, and results.
+            At Cali Digital Marketing, we believe in innovation, integrity, and results.
             We work tirelessly to transform challenges into opportunities,
             ensuring your business stays ahead in the ever-changing digital
             landscape. Let us help you shape a future of success and growth.
